@@ -10,6 +10,7 @@ module.exports = {
 		if (message.member.roles.some(r=>[ 'The Master of the Furries' ].includes(r.name))) {
 			const member = message.mentions.members.first();
 			member.kick();
+			console.log('kicked:' + member);
 			const taggedUser = message.mentions.users.first();
 			message.channel.send(`You kicked: ${taggedUser.username}`);
 		}

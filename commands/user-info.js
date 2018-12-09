@@ -1,6 +1,7 @@
 module.exports = {
 	name: 'user-info',
-	description: 'Display info about yourself.',
+	description: 'Display info about yourself or others.',
+	usage: ['', 'or', '@user'],
 	execute(message) {
 		message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
 		if (!message.mentions.users.size) {
