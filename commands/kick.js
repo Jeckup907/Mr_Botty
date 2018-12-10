@@ -10,7 +10,7 @@ module.exports = {
 		if (message.member.hasPermission('KICK_MEMBERS')) {
 			const member = message.mentions.members.first();
 			member.kick();
-			console.log('kicked:' + member);
+			console.log(message.author.tag + 'kicked:' + member);
 			const taggedUser = message.mentions.users.first();
 			message.channel.send(`You kicked: ${taggedUser.username}`);
 		}
