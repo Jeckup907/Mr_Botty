@@ -17,6 +17,7 @@ module.exports = {
 				console.error(err);
 				message.channel.send('there was an error trying to prune messages in this channel!');
 			});
+			console.log('Pruned', amount - 1, 'messages');
 		}
 		else {
 			console.log('NO PERMISSION');
