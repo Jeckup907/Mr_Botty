@@ -1,5 +1,5 @@
 {
-  "name": "Mr_Furry",
+  "name": "mr_furry",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,5 +12,13 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "eslint": "^5.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeckup907/Mr_Furry.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jeckup907/Mr_Furry/issues"
+  },
+  "homepage": "https://github.com/Jeckup907/Mr_Furry#readme"
 }

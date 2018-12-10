@@ -7,7 +7,7 @@ module.exports = {
 		if (!message.mentions.users.size) {
 			return message.reply('you need to tag a user in order to kick them!');
 		}
-		if (message.member.roles.some(r=>[ 'The Master of the Furries' ].includes(r.name))) {
+		if (message.member.hasPermission('KICK_MEMBERS')) {
 			const member = message.mentions.members.first();
 			member.kick();
 			console.log('kicked:' + member);
@@ -15,6 +15,7 @@ module.exports = {
 			message.channel.send(`You kicked: ${taggedUser.username}`);
 		}
 		else {
+			console.log('NO PERMISSION');
 			return message.reply('It doesn\'t seem like you have access to this command');
 		}
 	},

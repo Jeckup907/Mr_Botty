@@ -4,8 +4,8 @@ module.exports = {
 	usage: 'number',
 	guildOnly: true,
 	execute(message, args) {
-		const amount = parseInt(args[0]) + 1;
-		if (message.member.roles.some(r=>['Moderator furry', 'The Master of the Furries' ].includes(r.name))) {
+		const amount = parseInt(args[ 0 ]) + 1;
+		if (message.member.hasPermission('MANAGE_MESSAGES')) {
 			if (isNaN(amount)) {
 				return message.reply('that doesn\'t seem to be a valid number.');
 			}
@@ -19,6 +19,7 @@ module.exports = {
 			});
 		}
 		else {
+			console.log('NO PERMISSION');
 			return message.reply('It doesn\'t seem like you have the right to use this command');
 		}
 	},

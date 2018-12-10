@@ -28,7 +28,7 @@ client.on('message', message => {
 		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
 	if (!command) return;
-	console.log('\n' + message.author.username + ' used', (command));
+	console.log('\n' + message.author.tag + ' used the command:', (command), 'in the channel', '#' + message.channel.name, 'in the server', '\"'+ message.guild.name + '\"' );
 	if (command.guildOnly && message.channel.type !== 'text') {
 		return message.reply('I can\'t execute that command inside DMs!');
 	}
