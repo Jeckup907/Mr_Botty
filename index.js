@@ -1,5 +1,8 @@
+// makes the bot require the "file system module"
 const fs = require('fs');
+// makes the bot need the discord.js library
 const Discord = require('discord.js');
+// makes it so the bot gets the prefix wich should be used and the token for the discord bot
 const { prefix, token } = require('./config.json');
 
 const client = new Discord.Client();
@@ -11,7 +14,7 @@ for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	client.commands.set(command.name, command);
 }
-
+// adds a cooldown function to the bot
 const cooldowns = new Discord.Collection();
 
 client.once('ready', () => {
