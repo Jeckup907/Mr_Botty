@@ -1,4 +1,4 @@
-const reputation = require('reputation.json');
+const reputation = require('/reputation.json');
 const fs = require('fs');
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
 			};
 		}
 		reputation[message.mentions.users.id].rep = reputation[message.mentions.users.id].rep + 1;
-		fs.writeFile('reputation.json', JSON.stringify(reputation), (err) =>{
+		fs.writeFile('/reputation.json', JSON.stringify(reputation), (err) =>{
 			console.log(err);
 		});
 	},
