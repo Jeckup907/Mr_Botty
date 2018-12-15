@@ -1,4 +1,4 @@
-const reputation = require('../reputation.json');
+const reputation = require('reputation.json');
 const fs = require('fs');
 
 module.exports = {
@@ -11,13 +11,13 @@ module.exports = {
 			message.channel.send('Sorry, i couldn\'t find that user');
 			return;
 		}
-		if(!reputation[message.author.id]) {
-			reputation[message.author.id] = {
+		if(!reputation[message.mentions.users.id]) {
+			reputation[message.mentions.users.id] = {
 				rep: 0,
 			};
 		}
-		reputation[message.author.id].rep = reputation[message.author.id].rep - 1;
-		fs.writeFile('../reputation.json', JSON.stringify(reputation), (err) =>{
+		reputation[message.mentions.users.id].rep = reputation[message.users.mentions.id].rep - 1;
+		fs.writeFile('reputation.json', JSON.stringify(reputation), (err) =>{
 			console.log(err);
 		});
 	},

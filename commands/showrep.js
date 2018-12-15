@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const reputation = require('../reputation.json');
+const reputation = require('reputation.json');
 const fs = require('fs');
 module.exports = {
 	name: 'showrep',
@@ -21,7 +21,7 @@ module.exports = {
 			.setTitle(targetUser.user.username + ' Reputation')
 			.addField('Reputation', (reputation[message.mentions.users.first.id].rep).toString(), false);
 		message.channel.send(repEmbed);
-		fs.writeFile('../reputation.json', JSON.stringify(reputation), (err) =>{
+		fs.writeFile('reputation.json', JSON.stringify(reputation), (err) =>{
 			console.log(err);
 		});
 	},
