@@ -6,7 +6,7 @@ module.exports = {
 	description: 'add reputation to someone',
 	args: true,
 	execute(message, args) {
-		targetUser = message.guild.member(message.mentions.user.first());
+		let targetUser = message.guild.member(message.mentions.user.first());
 		console.log(targetUser);
 	}
 }
