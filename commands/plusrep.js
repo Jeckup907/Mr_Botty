@@ -7,7 +7,7 @@ module.exports = {
 	args: true,
 	execute(message, args) {
 		let targetUser = message.guild.member(message.mentions.users.first());
-		if(!targetuser) {
+		if(!targetUser) {
 			message.channel.send('Sorry, i couldn\'t find that user');
 			return;
 		}

@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const reputation = require('../reputation.json');
 const fs = require('fs');
-
 module.exports = {
 	name: 'showrep',
 	description: 'Show someone\'s reputation',
@@ -9,7 +8,7 @@ module.exports = {
 	cooldown: 3,
 	execute(message, args) {
 		let targetUser = message.guild.member(message.mentions.users.first());
-		if(!targetuser) {
+		if(!targetUser) {
 			message.channel.send('Sorry, i couldn\'t find that user');
 			return;
 		}
