@@ -18,7 +18,7 @@ module.exports = {
 			};
 		}
 		let repEmbed = new Discord.RichEmbed()
-			.setTitle(targetUser.user.username + 'Reputation')
+			.setTitle(targetUser.user.username + ' Reputation')
 			.addField('Reputation', (reputation[message.author.id].rep).toString(), false);
 		message.channel.send(repEmbed);
 		fs.writeFile('../reputation.json', JSON.stringify(reputation), (err) =>{
