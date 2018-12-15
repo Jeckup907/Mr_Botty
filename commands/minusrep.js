@@ -16,7 +16,7 @@ module.exports = {
 				rep: 0,
 			};
 		}
-		reputation[message.mentions.users.id].rep = reputation[message.users.mentions.id].rep - 1;
+		reputation[message.mentions.users.id].rep = reputation[message.mentions.users.id].rep - 1;
 		fs.writeFile('./reputation.json', JSON.stringify(reputation), (err) =>{
 			console.log(err);
 		});
