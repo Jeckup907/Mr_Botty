@@ -12,14 +12,14 @@ module.exports = {
 			message.channel.send('Sorry, i couldn\'t find that user');
 			return;
 		}
-		if(!reputation[message.author.id]) {
-			reputation[message.author.id] = {
+		if(!reputation[message.mentions.user.first.id]) {
+			reputation[message.mentions.user.first.id] = {
 				rep: 0,
 			};
 		}
 		let repEmbed = new Discord.RichEmbed()
 			.setTitle(targetUser.user.username + ' Reputation')
-			.addField('Reputation', (reputation[message.author.id].rep).toString(), false);
+			.addField('Reputation', (reputation[message.mentions.user.first.id].rep).toString(), false);
 		message.channel.send(repEmbed);
 		fs.writeFile('../reputation.json', JSON.stringify(reputation), (err) =>{
 			console.log(err);
