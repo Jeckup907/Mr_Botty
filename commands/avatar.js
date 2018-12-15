@@ -9,7 +9,7 @@ module.exports = {
 		}
 
 		const avatarList = message.mentions.users.map(user => {
-			return `${user.username}'s avatar: ${message.mentions.users.first.displayAvatarURL}`;
+			return `${user.username}'s avatar: ${user.displayAvatarURL}`;
 		});
 
 		message.channel.send(avatarList);
