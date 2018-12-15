@@ -2,8 +2,8 @@ const reputation = require('../reputation.json');
 const fs = require('fs');
 
 module.exports = {
-	name: 'plusrep',
-	description: 'add reputation to someone',
+	name: 'minusrep',
+	description: 'removes reputation from someone',
 	args: true,
 	execute(message, args) {
 		let targetUser = message.guild.member(message.mentions.users.first());
@@ -16,7 +16,7 @@ module.exports = {
 				rep: 0,
 			};
 		}
-		reputation[message.author.id].rep = reputation[message.author.id].rep + 1;
+		reputation[message.author.id].rep = reputation[message.author.id].rep - 1;
 		fs.writeFile('../reputation.json', JSON.stringify(reputation), (err) =>{
 			console.log(err);
 		});
