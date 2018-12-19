@@ -1,11 +1,15 @@
 // makes the bot require the "file system module"
 const fs = require('fs');
+
 // makes the bot need the discord.js library
 const Discord = require('discord.js');
+
 // makes it so the bot gets the prefix wich should be used and the token for the discord bot
 const { prefix, token } = require('./config.json');
 
+// Creates a client for the discord bot to use
 const client = new Discord.Client();
+
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
