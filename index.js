@@ -21,20 +21,24 @@ for (const file of commandFiles) {
 // adds a cooldown function to the bot
 const cooldowns = new Discord.Collection();
 
+// Once the client is ready this console log will be printed in the terminal
 client.once('ready', () => {
 	console.log('Ready!');
 });
 
+// When the bot have seen a message being sent in one of the channels it has access too, that starts with the prefix and is not a bot user it will continue with the code inside the brackets
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();
 
+	// gets the names of the commands
 	const command = client.commands.get(commandName)
 		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-
+	// if the message isn't a command, return to top
 	if (!command) return;
+	// post's a message in the log of who used which command in which channel and server
 	console.log('\n' + message.author.tag + ' used the command:', (command), 'in the channel', '#' + message.channel.name, 'in the server', '"' + message.guild.name + '"');
 	if (command.guildOnly && message.channel.type !== 'text') {
 		return message.reply('I can\'t execute that command inside DMs!');
