@@ -1,6 +1,8 @@
 // makes the bot require the "file system module"
 const fs = require('fs');
 
+const ytdl = require('ytdl-core');
+
 // makes the bot need the discord.js library
 const Discord = require('discord.js');
 
