@@ -12,6 +12,7 @@ const client = new Discord.Client();
 
 client.commands = new Discord.Collection();
 
+// this will return an array with all the file names that ends with .js in the commands folder
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
@@ -28,6 +29,12 @@ client.once('ready', () => {
 
 // When the bot have seen a message being sent in one of the channels it has access too, that starts with the prefix and is not a bot user it will continue with the code inside the brackets
 client.on('message', message => {
+
+
+	if((message.content.toLowerCase().includes('furrygang')) || (message.content.toLowerCase().includes('furry gang'))) {
+		message.react('526113207539204097');
+		console.log('Reacted to a message');
+	}
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
