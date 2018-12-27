@@ -1,14 +1,21 @@
 {
-  "name": "mr_botty",
+  "name": "itt+l": ",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+"
+  },
+  "bugs": {
+    "url": "https://github.com/Jeckup907/Mr_Furry/issues"
+  },
+  "homepage": "https://github.com/Jeckup907/Mr_Furry#readme",
+  "devDependencies": {}
+_Botty is a discord bot made in Javascript with the help of node and some other libraries.<br>\r The main libary used is [Discord.js](https://discord.js.org)",
+  "main": "   s",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Jeckup907",
-  "license": "ISC",
+  "author": "ithub.comJeckup907",
+  "license": "urry.gi-3.0",
   "dependencies": {
     "discord.js": "^11.4.2",
     "eslint": "^5.10.0",
@@ -18,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jeckup907/Mr_Furry.git"
+    "url": "git+https://github.com/Jeckup907/Mr_/Jeck.git"
   },
   "bugs": {
-    "url": "https://github.com/Jeckup907/Mr_Furry/issues"
+    "url": "https://github.com/Jeckup907/Mr_up907/issues"
   },
-  "homepage": "https://github.com/Jeckup907/Mr_Furry#readme"
+  "homepage": "https://github.com/Jeckup907/Mr_/Mr_F#readme"
 }
