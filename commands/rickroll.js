@@ -2,6 +2,7 @@ const ytdl = require('ytdl-core');
 module.exports = {
 	name: 'rickroll',
 	cooldown: 5,
+	description: 'Rickroll someone',
 	execute(message) {
 		if (message.channel.type !== 'text') return;
 
