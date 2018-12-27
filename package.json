@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "Jeckup907",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "discord.js": "^11.4.2",
     "eslint": "^5.10.0",
@@ -18,10 +18,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jeckup907/Mr_Furry.git"
+    "url": "git+https://github.com/Jeckup907/Mr_Botty.git"
   },
   "bugs": {
-    "url": "https://github.com/Jeckup907/Mr_Furry/issues"
+    "url": "https://github.com/Jeckup907/Mr_Botty/issues"
   },
-  "homepage": "https://github.com/Jeckup907/Mr_Furry#readme"
+  "homepage": "https://github.com/Jeckup907/Mr_Botty#readme"
 }
