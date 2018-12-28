@@ -5,7 +5,7 @@ module.exports = {
 	name: 'rickroll',
 	cooldown: 5,
 	description: 'Rickroll someone',
-	execute(message) {
+	execute(message, args) {
 		if (message.channel.type !== 'text') return;
 
 		const { voiceChannel } = message.member;
