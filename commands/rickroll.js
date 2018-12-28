@@ -14,8 +14,9 @@ module.exports = {
 			const exampleEmbed = new Discord.RichEmbed()
 				.setColor('#0099ff')
 				.setTitle('The Lyrics')
-				.addField('RickRolled', RickrollLyrics1)
-				.addField('Verse 2', RickrollLyrics2);
+				.setThumbnail('https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg')
+				.addField('RickRolled', RickrollLyrics1, true)
+				.addField('Verse 2', RickrollLyrics2, true);
 
 			message.channel.send(exampleEmbed);
 			return;
