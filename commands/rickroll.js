@@ -1,3 +1,4 @@
+const { RickrollLyrics } = require('./rickroll.json');
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 module.exports = {
@@ -14,7 +15,7 @@ module.exports = {
 			// eslint-disable-next-line semi
 				.setColor('#0099ff')
 				.setTitle('The Lyrics')
-				.addField('RickRolled', '')
+				.addField('RickRolled', RickrollLyrics)
 
 			// eslint-disable-next-line no-undef
 			channel.send(exampleEmbed);
