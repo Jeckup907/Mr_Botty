@@ -15,7 +15,7 @@ module.exports = {
 				.setColor('#0099ff')
 				.setTitle('The Lyrics')
 				.addField('RickRolled', RickrollLyrics1)
-				.addField('Verse 2', RickrollLyrics2)
+				.addField('Verse 2', RickrollLyrics2);
 
 			message.channel.send(exampleEmbed);
 			return;
