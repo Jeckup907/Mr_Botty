@@ -13,3 +13,5 @@ it should look something like this:<br>
     "token": "Your_bot_token_goes_here"
 }
 ```
+If you've set it up right<br>
+the bot can be started with typing `node .` in the console at the root of the repository.
