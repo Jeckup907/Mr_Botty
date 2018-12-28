@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 module.exports = {
 	name: 'rickroll',
@@ -9,7 +10,14 @@ module.exports = {
 		const { voiceChannel } = message.member;
 
 		if (!voiceChannel) {
-			return message.reply('please join a voice channel first!');
+			const exampleEmbed = new Discord.RichEmbed()
+			// eslint-disable-next-line semi
+				.setColor('#0099ff')
+				.setTitle('The Lyrics')
+				.addField('RickRolled', '')
+
+			// eslint-disable-next-line no-undef
+			channel.send(exampleEmbed);
 		}
 
 		voiceChannel.join().then(connection => {
