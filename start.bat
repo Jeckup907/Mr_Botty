@@ -1,2 +1,2 @@
 cd "%~dp0"
-start node index.js
+start node app.js
