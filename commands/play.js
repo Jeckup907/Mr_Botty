@@ -1,9 +1,9 @@
-const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 module.exports = {
 	name: 'play',
 	cooldown: 5,
 	description: 'play something',
+	guildOnly: true,
 	execute(message, args) {
 		if (message.channel.type !== 'text') return;
 

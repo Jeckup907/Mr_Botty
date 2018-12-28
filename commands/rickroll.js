@@ -5,7 +5,8 @@ module.exports = {
 	name: 'rickroll',
 	cooldown: 5,
 	description: 'Rickroll someone',
-	execute(message, args) {
+	guildOnly: true,
+	execute(message) {
 		if (message.channel.type !== 'text') return;
 
 		const { voiceChannel } = message.member;

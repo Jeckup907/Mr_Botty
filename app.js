@@ -46,7 +46,6 @@ client.on('message', message => {
 	// if the message isn't a command, return to top
 	if (!command) return;
 	// post's a message in the log of who used which command in which channel and server
-	console.log('\n' + message.author.tag + ' used the command:', (command), 'in the channel', '#' + message.channel.name, 'in the server', '"' + message.guild.name + '"');
 	if (command.guildOnly && message.channel.type !== 'text') {
 		return message.reply('I can\'t execute that command inside DMs!');
 	}
