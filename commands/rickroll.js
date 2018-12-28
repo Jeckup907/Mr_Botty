@@ -1,4 +1,4 @@
-const { RickrollLyrics } = require('./rickroll.json');
+const { RickrollLyrics1, RickrollLyrics2 } = require('./rickroll.json');
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 module.exports = {
@@ -12,13 +12,13 @@ module.exports = {
 
 		if (!voiceChannel) {
 			const exampleEmbed = new Discord.RichEmbed()
-			// eslint-disable-next-line semi
 				.setColor('#0099ff')
 				.setTitle('The Lyrics')
-				.addField('RickRolled', RickrollLyrics)
+				.addField('RickRolled', RickrollLyrics1)
+				.addField('Verse 2', RickrollLyrics2)
 
-			// eslint-disable-next-line no-undef
-			channel.send(exampleEmbed);
+			message.channel.send(exampleEmbed);
+			return;
 		}
 
 		voiceChannel.join().then(connection => {
