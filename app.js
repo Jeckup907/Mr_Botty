@@ -15,6 +15,9 @@ for (const file of commandFiles) {
 }
 // adds a cooldown function to the bot
 const cooldowns = new Discord.Collection();
+client.on('ready', () => {
+	client.user.setActivity('furry porn', { type: 'WATCHING' });
+});
 // Once the client is ready this console log will be printed in the terminal
 client.once('ready', () => {
 	console.log('Ready!');
@@ -44,8 +47,8 @@ client.on('message', message => {
 		}
 		return message.channel.send(reply);
 	}
-	if(command && command.guildOnly) {
-		message.delete();
+	if(command && message.guild.available !== 'null') {
+		message.delete(3000);
 	}
 	console.log(command);
 	if (!cooldowns.has(command.name)) {
@@ -68,7 +71,9 @@ client.on('message', message => {
 	}
 	catch (error) {
 		console.error(error);
-		message.reply('there was an error trying to execute that command!');
+		message.reply('there was an error trying to execute that command!').then(msg => {
+			msg.delete(10000);
+		});
 	}
 });
 client.login(token);
