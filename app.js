@@ -3,7 +3,7 @@ const fs = require('fs');
 // makes the bot need the discord.js library
 const Discord = require('discord.js');
 // makes it so the bot gets the prefix wich should be used and the token for the discord bot
-const { prefix, token, activity, ActivityType } = require('./config.json');
+const { prefix, token, activity, activityType } = require('./config.json');
 // Creates a client for the discord bot to use
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -16,7 +16,7 @@ for (const file of commandFiles) {
 // adds a cooldown function to the bot
 const cooldowns = new Discord.Collection();
 client.on('ready', () => {
-	client.user.setActivity(activity, { type: ActivityType });
+	client.user.setActivity(activity, { type: activityType });
 });
 // Once the client is ready this console log will be printed in the terminal
 client.once('ready', () => {
