@@ -10,7 +10,8 @@ it should look something like this:<br>
 ```json
 {
     "prefix": "Your_prefix_goes_here",
-    "token": "Your_bot_token_goes_here"
+    "token": "Your_bot_token_goes_here",
+    "activity": "The_activity_of_the_bot_here"
 }
 ```
 If you've set it up right<br>
