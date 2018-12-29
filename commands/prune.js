@@ -3,6 +3,7 @@ module.exports = {
 	description: 'Prune up to 99 messages.',
 	usage: 'number',
 	guildOnly: true,
+	prune: true,
 	execute(message, args) {
 		const amount = parseInt(args[ 0 ]) + 1;
 		if (message.member.hasPermission('MANAGE_MESSAGES')) {
