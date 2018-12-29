@@ -44,6 +44,10 @@ client.on('message', message => {
 		}
 		return message.channel.send(reply);
 	}
+	if(command && command.guildOnly) {
+		message.delete();
+	}
+	console.log(command);
 	if (!cooldowns.has(command.name)) {
 		cooldowns.set(command.name, new Discord.Collection());
 	}
