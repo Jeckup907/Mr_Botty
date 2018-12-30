@@ -47,7 +47,7 @@ client.on('message', message => {
 		}
 		return message.channel.send(reply);
 	}
-	if(command && message.guild.available !== 'null' && !command.prune) {
+	if(command && message.guild && !command.prune) {
 		message.delete(3000);
 	}
 	console.log(command);
@@ -61,7 +61,9 @@ client.on('message', message => {
 		const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
 		if (now < expirationTime) {
 			const timeLeft = (expirationTime - now) / 1000;
-			return message.reply(`please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`);
+			return message.reply(`please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`).then(msg => {
+				msg.delete(10000);
+			});
 		}
 	}
 	timestamps.set(message.author.id, now);
