@@ -16,6 +16,7 @@ for (const file of commandFiles) {
 // adds a cooldown function to the bot
 const cooldowns = new Discord.Collection();
 client.on('ready', () => {
+	// needs working on
 	client.user.setActivity(activity, { type: activityType });
 });
 // Once the client is ready this console log will be printed in the terminal
