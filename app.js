@@ -21,7 +21,7 @@ client.on('ready', () => {
 });
 // Once the client is ready this console log will be printed in the terminal
 client.once('ready', () => {
-	console.log('Ready!');
+	console.log('Bot is up and running!');
 });
 // When the bot have seen a message being sent in one of the channels it has access too, that starts with the prefix and is not a bot user it will continue with the code inside the brackets
 client.on('message', message => {
