@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Jeckup907",
+  "author": "Retardur",
   "license": "GPL-3.0",
   "dependencies": {
     "discord.js": "^11.4.2",
@@ -17,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jeckup907/Mr_Botty.git"
+    "url": "git+https://github.com/Retardur/Mr_Botty.git"
   },
   "bugs": {
-    "url": "https://github.com/Jeckup907/Mr_Botty/issues"
+    "url": "https://github.com/Retardur/Mr_Botty/issues"
   },
-  "homepage": "https://github.com/Jeckup907/Mr_Botty#readme"
+  "homepage": "https://github.com/Retardur/Mr_Botty#readme"
 }
