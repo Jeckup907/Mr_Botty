@@ -2,6 +2,7 @@ const { dabLinks } = require('./Links.json');
 module.exports = {
 	name: 'dab',
 	description: 'dab on them haters',
+	guildOnly: false,
 	execute(message) {
 		message.channel.send({
 			// gets a random link from the Links.json file and then posts it

@@ -1,5 +1,5 @@
 const { prefix } = require('../config.json');
-
+const Discord = require('discord.js');
 module.exports = {
 	name: 'help',
 	description: 'List all of my commands or info about a specific command.',
@@ -11,7 +11,15 @@ module.exports = {
 		const { commands } = message.client;
 		if (!args.length) {
 			data.push('Here\'s a list of all my commands:');
-			data.push(commands.map(command => command.name).join(', '));
+
+
+			const exampleEmbed = new Discord.RichEmbed()
+			.setColor('#0099ff')
+			.setTitle('The commands')
+			.addField('commands', commands.map(command => command.name).join(', '))
+			
+			message.author.send(exampleEmbed);
+		
 			data.push(`\nYou can send \`${prefix}help [command name]\` to get info on a specific command!`);
 			return message.author.send(data, { split: true })
 				.then(() => {
@@ -35,6 +43,7 @@ module.exports = {
 		if (command.description) data.push(`**Description:** ${command.description}`);
 		if (command.usage) data.push(`**Usage:** ${prefix}${command.name} ${command.usage}`);
 		data.push(`**Cooldown:** ${command.cooldown || 3} second(s)`);
+		data.push(`**GuildOnly:** ${command.guildOnly}`);
 		message.channel.send(data, { split: true });
 	},
 };
