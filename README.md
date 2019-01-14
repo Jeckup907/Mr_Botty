@@ -11,8 +11,12 @@ it should look something like this:<br>
 {
     "prefix": "Your_prefix_goes_here",
     "token": "Your_bot_token_goes_here",
-    "activity": "The_activity_of_the_bot_here"
+    "activity": "The_activity_of_the_bot_here";
+    "activityType": "The_type_of_the_activity_here"
 }
 ```
+In activityType you can choose between ```"PLAYING", "STREAMING", "WATCHING" and "LISTENING"```
+You must write them with all capped letters
+
 If you've set it up right<br>
 the bot can be started with typing `node .` in the console at the root of the repository.
