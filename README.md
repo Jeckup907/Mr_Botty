@@ -11,7 +11,7 @@ it should look something like this:<br>
 {
     "prefix": "Your_prefix_goes_here",
     "token": "Your_bot_token_goes_here",
-    "activity": "The_activity_of_the_bot_here";
+    "activity": "The_activity_of_the_bot_here",
     "activityType": "The_type_of_the_activity_here"
 }
 ```
