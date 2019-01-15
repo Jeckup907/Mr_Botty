@@ -6,6 +6,7 @@ module.exports = {
 	aliases: ['commands'],
 	usage: '[command name]',
 	cooldown: 5,
+	guildOnly: false,
 	execute(message, args) {
 		const data = [];
 		const { commands } = message.client;
@@ -14,12 +15,12 @@ module.exports = {
 
 
 			const exampleEmbed = new Discord.RichEmbed()
-			.setColor('#0099ff')
-			.setTitle('The commands')
-			.addField('commands', commands.map(command => command.name).join(', '))
-			
+				.setColor('#0099ff')
+				.setTitle('The commands')
+				.addField('commands', commands.map(command => command.name).join(', '));
+
 			message.author.send(exampleEmbed);
-		
+
 			data.push(`\nYou can send \`${prefix}help [command name]\` to get info on a specific command!`);
 			return message.author.send(data, { split: true })
 				.then(() => {
