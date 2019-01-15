@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Retardur/Mr_Botty#readme",
   "devDependencies": {
-    "eslint": "^5.12.0"
+    "eslint": "^5.12.0",
+    "nodemon": "^1.18.9"
   }
 }
