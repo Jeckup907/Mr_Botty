@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Retardur/Mr_Botty/issues"
   },
-  "homepage": "https://github.com/Retardur/Mr_Botty#readme"
+  "homepage": "https://github.com/Retardur/Mr_Botty#readme",
+  "devDependencies": {
+    "eslint": "^5.12.0"
+  }
 }
