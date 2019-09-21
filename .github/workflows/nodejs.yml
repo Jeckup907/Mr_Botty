@@ -4,10 +4,15 @@ on: [push]
 
 jobs:
   Linting:
-  
-     - name: ESLint checks
-       uses: gimenete/eslint-action@1.0
-
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js 8.x
+      uses: gimenete/eslint-action@1.0
+      with:
+        node-version: 8.x
+    - name: ESLint checks
+    
   build:
     runs-on: ${{ matrix.os }}
     strategy:
