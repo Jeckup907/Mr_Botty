@@ -12,7 +12,7 @@ jobs:
       with:
         node-version: 8.x
     - name: ESLint checks
-    
+      run: node .
   build:
     runs-on: ${{ matrix.os }}
     strategy:
