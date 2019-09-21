@@ -1,7 +1,6 @@
   jobs:
     Linting:
       name: ESLint checks
-        steps:
-          - uses: gimenete/eslint-action@1.0
+        - uses: gimenete/eslint-action@1.0
             with:
               node-version: 8.x
