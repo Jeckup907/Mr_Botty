@@ -25,3 +25,6 @@ jobs:
         npm test
       env:
         CI: true
+      
+     - name: ESLint checks
+       uses: gimenete/eslint-action@1.0
