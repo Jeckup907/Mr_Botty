@@ -3,6 +3,11 @@ name: Node CI
 on: [push]
 
 jobs:
+  Linting:
+  
+     - name: ESLint checks
+       uses: gimenete/eslint-action@1.0
+
   build:
     runs-on: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
     strategy:
