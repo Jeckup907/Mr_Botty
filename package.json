@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "commands/ping.js"
+    "test": "jest"
   },
   "keywords": [],
   "author": "Retardur",
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/Retardur/Mr_Botty#readme",
   "devDependencies": {
     "eslint": "^5.12.0",
+    "jest": "^24.9.0",
     "nodemon": "^1.18.9"
   }
 }

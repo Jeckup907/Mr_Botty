@@ -19,8 +19,18 @@ client.on('ready', () => {
 	// needs working on
 	client.user.setActivity(activity, { type: activityType });
 });
+
+function app() {
+	const a = 1;
+	return Boolean(a);
+}
+client.once('ready', () => {
+	app(true);
+});
+
 // Once the client is ready this console log will be printed in the terminal
 client.once('ready', () => {
+
 	console.log('Bot is up and running!');
 });
 // When the bot have seen a message being sent in one of the channels it has access too, that starts with the prefix and is not a bot user it will continue with the code inside the brackets
@@ -74,3 +84,4 @@ client.on('message', message => {
 	}
 });
 client.login(token);
+module.exports = app;
